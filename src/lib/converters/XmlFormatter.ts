@@ -1,4 +1,5 @@
-import xmlFormatter from 'xml-formatter'
+import type { ConverterOptions } from '@lib/types'
+import { output as xmlOutput } from '@lib/outputs/XmlOutput'
 
 /**
  * A string which uniquely identifies this operation.
@@ -19,10 +20,9 @@ export const outputId = 'html'
  *
  * @returns the converted string.
  */
-export const operation = (input: string): string => {
-  return xmlFormatter(input, {
-    collapseContent: true,
-    indentation: '    ',
-    lineSeparator: '\n',
-  })
+export const operation = async (
+  input: string,
+  options: ConverterOptions = {},
+): Promise<string> => {
+  return xmlOutput(input, options)
 }

@@ -40,6 +40,7 @@
   "urlDecoder": "URL decode",
   "urlEncoder": "URL encode",
   "uuidGenerator": "UUID Generator",
+  "xmlDecoder": "XML decode",
   "xmlFormatter": "XML format",
   "xmlToJsonConverter": "XML to JSON",
   "xmlToTomlConverter": "XML to TOML",
